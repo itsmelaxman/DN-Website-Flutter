@@ -8,7 +8,7 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth > 800) {
+        if (constraints.maxWidth > 1200) {
           return const DesktopNavBar();
         } else {
           return const MobileNavBar();
@@ -29,7 +29,6 @@ class DesktopNavBar extends StatelessWidget {
         horizontal: 40,
       ),
       child: Container(
-        constraints: const BoxConstraints(maxWidth: 1200),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -134,51 +133,54 @@ class MobileNavBar extends StatelessWidget {
           height: 100,
           width: 150,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              'Home',
-              style: TextStyle(
-                color: Colors.white,
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text(
+                'Home',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
-            ),
-            SizedBox(width: 30),
-            Text(
-              'About Us',
-              style: TextStyle(
-                color: Colors.white,
+              SizedBox(width: 30),
+              Text(
+                'About Us',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
-            ),
-            SizedBox(width: 30),
-            Text(
-              'Products',
-              style: TextStyle(
-                color: Colors.white,
+              SizedBox(width: 30),
+              Text(
+                'Products',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
-            ),
-            SizedBox(width: 30),
-            Text(
-              'Blog',
-              style: TextStyle(
-                color: Colors.white,
+              SizedBox(width: 30),
+              Text(
+                'Blog',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
-            ),
-            SizedBox(width: 30),
-            Text(
-              'FAQ',
-              style: TextStyle(
-                color: Colors.white,
+              SizedBox(width: 30),
+              Text(
+                'FAQ',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
-            ),
-            SizedBox(width: 30),
-            Text(
-              'Contact Us',
-              style: TextStyle(
-                color: Colors.white,
+              SizedBox(width: 30),
+              Text(
+                'Contact Us',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     ));

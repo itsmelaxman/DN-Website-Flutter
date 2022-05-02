@@ -1,2 +1,11 @@
 const String TITLE = "Digital Nepal - School Management System";
-
+const String LOGIN = "Login";
+const String LOGOUT = "Logout";
+const String ABOUT = "About Us";
+const String CONTACT = "Contact Us";
+const String SETTINGS = "Settings";
+const String LANGUAGE = "Language";
+const String PRODUCTS = "Products";
+const String HOME = "Home";
+const String BLOG = "Blog";
+const String FAQ = "FAQ";
