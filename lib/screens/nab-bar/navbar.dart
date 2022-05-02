@@ -10,6 +10,8 @@ class NavBar extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth > 1200) {
           return const DesktopNavBar();
+        } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
+          return const DesktopNavBar();
         } else {
           return const MobileNavBar();
         }
@@ -97,6 +99,7 @@ class DesktopNavBar extends StatelessWidget {
                   ),
                   child: MaterialButton(
                     onPressed: () {},
+                    highlightColor: Colors.transparent,
                     child: const Text(
                       'Login',
                       style: TextStyle(
